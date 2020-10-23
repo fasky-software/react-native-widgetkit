@@ -16,4 +16,9 @@ class Widgetkit: NSObject {
             WidgetCenter.shared.reloadTimelines(ofKind: ofKind)
         }
     }
+
+    @objc
+    static func requiresMainQueueSetup() -> Bool {
+        return true
+    }
 }
