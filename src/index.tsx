@@ -5,7 +5,8 @@ type WidgetkitType = {
   reloadTimelines(ofKind: string): void;
 };
 
-const { reloadAllTimelines, reloadTimelines } = NativeModules;
+const { Widgetkit } = NativeModules;
+const { reloadAllTimelines, reloadTimelines } = Widgetkit || {};
 
 export default {
   reloadAllTimelines: reloadAllTimelines || (() => {}),
