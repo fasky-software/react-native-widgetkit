@@ -1,10 +1,13 @@
 import { NativeModules } from 'react-native';
 
 type WidgetkitType = {
-  multiply(a: number, b: number): Promise<number>;
   reloadAllTimelines(): void;
+  reloadTimelines(ofKind: string): void;
 };
 
-const { Widgetkit } = NativeModules;
+const { reloadAllTimelines, reloadTimelines } = NativeModules;
 
-export default Widgetkit as WidgetkitType;
+export default {
+  reloadAllTimelines: reloadAllTimelines || (() => {}),
+  reloadTimelines: reloadTimelines || (() => {}),
+} as WidgetkitType;

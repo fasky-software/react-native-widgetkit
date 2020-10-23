@@ -3,16 +3,14 @@ import { StyleSheet, View, Text } from 'react-native';
 import Widgetkit from 'react-native-widgetkit';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
   React.useEffect(() => {
     Widgetkit.reloadAllTimelines();
-    Widgetkit.multiply(3, 7).then(setResult);
+    Widgetkit.reloadTimelines('test');
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Hello World</Text>
     </View>
   );
 }

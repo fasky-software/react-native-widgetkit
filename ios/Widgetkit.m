@@ -2,10 +2,7 @@
 
 @interface RCT_EXTERN_MODULE(Widgetkit, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
-
 RCT_EXTERN_METHOD(reloadAllTimelines)
+RCT_EXTERN_METHOD(reloadTimelines:(char[])ofKind)
 
 @end
