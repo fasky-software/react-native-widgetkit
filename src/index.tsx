@@ -1,14 +1,13 @@
 import { NativeModules } from 'react-native';
 
-type WidgetkitType = {
-  reloadAllTimelines(): void;
-  reloadTimelines(ofKind: string): void;
-};
-
 const { Widgetkit } = NativeModules;
-const { reloadAllTimelines, reloadTimelines } = Widgetkit || {};
+const {
+  reloadAllTimelines: reloadAllTimelinesNative,
+  reloadTimelines: reloadTimelinesNative,
+} = Widgetkit || {};
 
-export default {
-  reloadAllTimelines: reloadAllTimelines || (() => {}),
-  reloadTimelines: reloadTimelines || (() => {}),
-} as WidgetkitType;
+export const reloadAllTimelines = (reloadAllTimelinesNative ||
+  (() => {})) as () => void;
+export const reloadTimelines = (reloadTimelinesNative || (() => {})) as (
+  ofKind: string
+) => void;

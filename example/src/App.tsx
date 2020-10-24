@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { StyleSheet, View, Text, Alert } from 'react-native';
-import Widgetkit from 'react-native-widgetkit';
+import { reloadAllTimelines, reloadTimelines } from 'react-native-widgetkit';
 
 export default function App() {
   React.useEffect(() => {
-    Widgetkit.reloadAllTimelines();
-    Widgetkit.reloadTimelines('test');
+    reloadAllTimelines();
+    reloadTimelines('test');
     Alert.alert('checks passed');
   }, []);
 
