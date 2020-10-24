@@ -48,7 +48,7 @@ reloadAllTimelines();
 
 ## Methods 📖‍
 
-#### `reloadAllTimelines(ofKind: String)`
+#### `reloadAllTimelines()`
 
 Reloads the timelines for all widgets of a particular kind.
 
