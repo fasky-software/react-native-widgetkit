@@ -28,7 +28,7 @@
 
 This library allows you to call essential methods from the iOS "WidgetKit Framework", which are needed when developing a widget. For example updating the widget timelines
 
-🚨 To be on the safe side: This library exposes API functionality of WidgetKit (https://developer.apple.com/documentation/widgetkit/). The widgets themselves must be developed natively in SwiftUI.
+🚨 To be on the safe side: This library exposes API functionality of <a href="https://developer.apple.com/documentation/widgetkit/">WidgetKit</a>. The widgets themselves must be developed natively in SwiftUI.
 
 ## Installation 🖇‍
 
