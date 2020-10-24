@@ -50,13 +50,13 @@ reloadAllTimelines();
 
 #### `reloadAllTimelines()`
 
-Reloads the timelines for all widgets of a particular kind.
+Reloads the timelines for all configured widgets belonging to the containing app.
 
 ---
 
 #### `reloadTimelines(ofKind: String)`
 
-Reloads the timelines for all configured widgets belonging to the containing app.
+Reloads the timelines for all widgets of a particular kind.
 
 ---
 
