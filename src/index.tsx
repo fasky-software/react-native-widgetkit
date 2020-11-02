@@ -32,10 +32,10 @@ export const reloadTimelines = (reloadTimelinesNative || (() => {})) as (
  * @param appGroup - App Group
  *
  */
-export const getItem = (getItemNative || (() => {})) as (
-  key: string,
-  appGroup: string
-) => Promise<void>;
+export const getItem = (getItemNative ||
+  (() => {
+    return Promise.resolve();
+  })) as (key: string, appGroup: string) => Promise<string>;
 
 /**
  * Writes Key-Value to UserDefaults database.
@@ -45,8 +45,7 @@ export const getItem = (getItemNative || (() => {})) as (
  * @param appGroup - App Group
  *
  */
-export const setItem = (setItemNative || (() => {})) as (
-  key: string,
-  value: string,
-  appGroup: string
-) => Promise<String>;
+export const setItem = (setItemNative ||
+  (() => {
+    return Promise.resolve();
+  })) as (key: string, value: string, appGroup: string) => Promise<void>;

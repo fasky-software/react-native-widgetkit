@@ -11,8 +11,8 @@ export default function App() {
   React.useEffect(() => {
     setTimeout(async () => {
       reloadAllTimelines();
-      reloadTimelines('test');
-      setItem('test', 'Hello World', 'group.com.fasky');
+      reloadTimelines('test2');
+      await setItem('test', 'Hello World', 'group.com.fasky');
       const item = await getItem('test', 'group.com.fasky');
 
       Alert.alert('checks passed: ' + item);
