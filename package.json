@@ -1,6 +1,6 @@
 {
   "name": "react-native-widgetkit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React-Native Library which exposes useful methods of iOS WidgetKit",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
