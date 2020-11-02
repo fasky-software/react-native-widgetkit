@@ -17,12 +17,12 @@
 
 ## Table of Contents 📚
 
-- [Introduction 👨‍🏫](##introduction-👨‍🏫)
-- [Installation 🖇‍](##installation-🖇‍)
-- [Usage 👨🏻‍💻](##usage-👨🏻‍💻)
-- [Methods 📖](##methods-📖‍)
-- [Contributors 🤓](##contributors-🤓)
-- [License 🔖](##license-🔖)
+- [Introduction 👨‍🏫](#introduction-)
+- [Installation 🖇‍](#installation-)
+- [Usage 👨🏻‍💻](#usage-)
+- [Methods 📖](#methods-)
+- [Contributors 🤓](#contributors-)
+- [License 🔖](#license-)
 
 ## Introduction 👨‍🏫
 
@@ -57,6 +57,18 @@ Reloads the timelines for all configured widgets belonging to the containing app
 #### `reloadTimelines(ofKind: String)`
 
 Reloads the timelines for all widgets of a particular kind.
+
+---
+
+#### `WidgetKit.setItem(String key, String value, String appGroup)`
+
+Writes Key-Value to <a href="https://developer.apple.com/documentation/foundation/userdefaults">UserDefaults</a> database.
+
+---
+
+#### `WidgetKit.getItem(String key, String appGroup)`
+
+Reads Value from <a href="https://developer.apple.com/documentation/foundation/userdefaults">UserDefaults</a> database.
 
 ---
 

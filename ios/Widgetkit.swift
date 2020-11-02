@@ -21,6 +21,41 @@ class Widgetkit: NSObject {
         }
     }
 
+    @objc(getItem:withAppGroup:withResolver:withRejecter:)
+    func getItem(key: String, appGroup: String, resolve: RCTPromiseResolveBlock,reject: RCTPromiseRejectBlock) -> Void {
+        var sharedDefaults: UserDefaults? = nil;
+        
+        if(appGroup != "") {
+            sharedDefaults = UserDefaults.init(suiteName: appGroup)
+        }
+        
+        if(sharedDefaults == nil) {
+            resolve(nil)
+            return
+        }
+        
+        let value = sharedDefaults?.value(forKey: key)
+        resolve(value);
+    }
+
+    @objc(setItem:withValue:withAppGroup:withResolver:withRejecter:)
+    func setItem(key: String, value: String, appGroup: String, resolve: RCTPromiseResolveBlock,reject: RCTPromiseRejectBlock) -> Void {
+        var sharedDefaults: UserDefaults? = nil;
+        
+        if(appGroup != "") {
+            sharedDefaults = UserDefaults.init(suiteName: appGroup)
+        }
+        
+        if(sharedDefaults == nil) {
+            resolve(nil)
+            return
+        }
+        
+        sharedDefaults?.setValue(value, forKey: key)
+        resolve(nil)
+    }
+
+
     @objc
     static func requiresMainQueueSetup() -> Bool {
         return true

@@ -1,12 +1,22 @@
 import * as React from 'react';
 import { StyleSheet, View, Text, Alert } from 'react-native';
-import { reloadAllTimelines, reloadTimelines } from 'react-native-widgetkit';
+import {
+  reloadAllTimelines,
+  reloadTimelines,
+  getItem,
+  setItem,
+} from 'react-native-widgetkit';
 
 export default function App() {
   React.useEffect(() => {
-    reloadAllTimelines();
-    reloadTimelines('test');
-    Alert.alert('checks passed');
+    setTimeout(async () => {
+      reloadAllTimelines();
+      reloadTimelines('test');
+      setItem('test', 'Hello World', 'group.com.fasky');
+      const item = await getItem('test', 'group.com.fasky');
+
+      Alert.alert('checks passed: ' + item);
+    }, 0);
   }, []);
 
   return (
