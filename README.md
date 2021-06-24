@@ -34,6 +34,8 @@ This library allows you to call essential methods from the iOS "WidgetKit Framew
 
 ```sh
 npm install react-native-widgetkit
+    
+cd ios && pod install && cd ..
 ```
 
 ## Usage 👨🏻‍💻
